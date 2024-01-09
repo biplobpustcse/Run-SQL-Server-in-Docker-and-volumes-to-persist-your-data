@@ -14,8 +14,21 @@ https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-co
 ## Let's start
 
 #### Step #01: 
-###### Download Docker image.
+###### Download Docker Image.
 ###### command
 ```
 docker pull mcr.microsoft.com/mssql/server:2019-latest
+```
+#### Step #02-a: 
+###### How to use this Image(not persist your data)
+###### command
+```
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -e "MSSQL_PID=Evaluation" -p 1433:1433  --name sqlpreview --hostname sqlpreview -d mcr.microsoft.com/mssql/server:2019-preview-ubuntu-22.04
+```
+
+#### Step #02-b: 
+###### How to use this Image(persist your data)
+###### command
+```
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=dat55a!21122019" -p 1433:1433 --name sql2019 -v F:/DockerDatabase/DockerDataVolume/SqlData/data:/var/opt/mssql/data -v F:/DockerDatabase/DockerDataVolume/SqlData/log:/var/opt/mssql/log -v F:/DockerDatabase/DockerDataVolume/SqlData/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-latest
 ```
