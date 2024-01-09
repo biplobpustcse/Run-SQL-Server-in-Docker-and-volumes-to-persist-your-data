@@ -10,3 +10,12 @@ https://hub.docker.com/_/microsoft-mssql-server
 
 #### Documentation for volumes and persisting data:
 https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-ver16&pivots=cs1-bash#persist
+
+## Let's start
+
+#### Step #01: 
+###### Download Docker image.
+###### command
+```
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+```
