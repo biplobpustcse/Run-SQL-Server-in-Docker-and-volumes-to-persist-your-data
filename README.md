@@ -30,7 +30,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -e "M
 ###### How to use this Image or create container with volumes (persist your data)
 ###### command
 ```
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=dat55a!21122019" -p 1433:1433 --name sql2019 -v F:/DockerDatabase/DockerDataVolume/SqlData/data:/var/opt/mssql/data -v F:/DockerDatabase/DockerDataVolume/SqlData/log:/var/opt/mssql/log -v F:/DockerDatabase/DockerDataVolume/SqlData/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=dat55a!21122019" -p 1433:1433 --name sql2019 -v F:/DockerDatabase/DockerDataVolume/sql2019/SqlData/data:/var/opt/mssql/data -v F:/DockerDatabase/DockerDataVolume/sql2019/SqlData/log:/var/opt/mssql/log -v F:/DockerDatabase/DockerDataVolume/sql2019/SqlData/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 ![image](https://github.com/biplobpustcse/Run-SQL-Server-in-Docker-and-volumes-to-persist-your-data/assets/59637279/8940028c-05aa-4957-bb8c-fc9d03461001)
 
